@@ -35,10 +35,12 @@
   text-transform: lowercase;
   background: none; 
   filter: var(--filter);
-  cursor: pointer;
   border-image-source: url('../images/border.png');
   border-image-slice: 20;
   border-image-repeat: round;
+  position: relative;    
+  overflow: hidden;  
+  cursor: var(--cursor);
 }
 
 .header__border {
@@ -300,18 +302,13 @@
   transition: box-shadow 0.3s ease;
 }
 
-.header__theme-menu-button {
-  position: relative;    
-  overflow: hidden;  
-  cursor: var(--cursor);
-}
+
 
   .header__theme-menu-button:hover {
   filter: var(--filter) blur(0.4px);
 }
 
-.diskette-dialogg {
-  border: 2px solid var(--accent-color)0;
+.diskette-dialogy {
   border: 2px solid var(--accent-color);
   padding: 30px 40px;
   background-color: white;
@@ -321,21 +318,21 @@
   display: none; 
 }
 
-.diskette-dialogg[open] .modal__content {
+.diskette-dialogy[open] .modal__content {
   display: flex;
   flex-direction: column;
   gap: 30px;
   background-color: white;
 }
 
-.diskette-dialogg[open] .modal__left {
+.diskette-dialogy[open] .modal__left {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 20px;
 }
 
-.diskette-dialogg[open] .modal__right {
+.diskette-dialogy[open] .modal__right {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -355,7 +352,7 @@
   background-color: transparent;
 }
 
-.diskette-dialogg::backdrop {
+.diskette-dialogy::backdrop {
   background: rgba(var(--accent-color-rgb), 0.75);
 }
 
@@ -487,7 +484,7 @@
   flex-direction: row;
 }
 
-.diskette-dialogg {
+.diskette-dialogy {
   max-width: 353px;
   padding: 30px 30px;
 }
