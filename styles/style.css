@@ -1,38 +1,23 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ like-icon — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
-
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
-  font-style: var(--font-main);
-  font-variation-settings: var(--weight-card-text);
+  font-family: var(--font-main);
   background-image: var(--page-bg);
   background-size: cover;      
-  background-attachment: fixed; 
+  background-attachment: fixed;
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
+  font-variation-settings: var(--weight-card-text); 
 }
 
 .header {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  gap: 60px;
+  min-height: 100vh;
   padding-bottom: 100px;
-  gap: 66px;
-
-
- 
-  
 }
+
 .header__theme-menu-list {
   display: flex;
   gap: 20px;
@@ -40,118 +25,92 @@
 }
 
 .header__theme-menu-button {
-  border: 2px solid var(--accent-color);
-  
+  border: 5px solid transparent; 
   padding: 5px 13px;
-  font-family: var(--font-accent);
   color: black;
+  font-family: var(--font-accent);
   font-weight: 400;
   font-size: 10px;
   line-height: 1;
   text-transform: lowercase;
-  background: none;
+  background: none; 
+  filter: var(--filter);
   cursor: pointer;
+  border-image-source: url('../images/border.png');
+  border-image-slice: 20;
+  border-image-repeat: round;
 }
 
 .header__border {
-  border: 2px solid var(--accent-color);
-  background: #fff;
-  background-clip: padding-box;
-  padding-left:  clamp(16px, 4vw, 123px);
-    padding-right: clamp(16px, 4vw, 123px);
-    padding-top:    clamp(120px, 10vw, 133px);
-    padding-bottom: clamp(120px, 10vw, 133px);
-
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-    gap: 20px;
-
+  align-items: center;
+  gap: 20px;
+  border: 2px solid var(--accent-color);
+  padding-top:    clamp(120px, 10vw, 133px);
+  padding-right: clamp(16px, 4vw, 123px);
+  padding-bottom: clamp(120px, 10vw, 133px);
+  padding-left:  clamp(16px, 4vw, 123px);
+  background: #fff;
+  background-clip: padding-box;
 }
 
 .header__title {
+  color: var(--accent-color);
   font-family: var(--font-accent);
   font-weight: 400;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);;
-
   text-transform: uppercase;
-  color: var(--accent-color);
 }
 
 .header p {
- 
-
-font-family: var(--font-accent);
-font-style: normal;
-font-weight: 400;
-font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
-line-height: 14px;
-/* identical to box height */
-text-transform: uppercase;
-
-color: var(--accent-color);
-
-
+  color: var(--accent-color);
+  font-family: var(--font-accent);
+  font-weight: 400;
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  font-style: normal;
+  line-height: 14px;
+  text-transform: uppercase;
 }
+
 .card__content {
-  border: 2px solid var(--accent-color)
+  border: 2px solid var(--accent-color);
 }
+
 .cards__text {
-  
-  
-
-font-family: var(--font-main);
-font-style: normal;
-font-weight: 410;
-font-size: 18px;
-padding: 25px;
-display: flex;
-flex-direction: column;
-
-gap: 25px;
-/* Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее. */
-
-
-line-height: 21px;
-
-
-color: black;
-
-
-
-
-
-
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px;
+  color: black;
+  font-family: var(--font-main);
+  font-weight: 410;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 21px;
 }
 
 .cards {
   display: flex;               
   flex-direction: column;      
   align-items: center;       
-
   gap: 52px;                 
 }
 
 .card {
-  max-width: clamp(375px,100%,700px );
-  display: flex;               /* или display: grid; */
-  flex-direction: column; 
-  
-  
+  display: flex;               
+  flex-direction: column;
+  max-width: clamp(375px,100%,700px ); 
   background-color: white;  
-  
-
 }
 
-
-
 .card__buttons {
-  display: flex;               /* или display: grid; */      /* если флекс */
-  align-items: center; 
+  display: flex;               
   justify-content: flex-end;
-  padding: 0 25px 21px 0;
+  align-items: center;
   gap: 5px;
+  padding: 0 25px 21px 0;
 }
 
 .card__image {
@@ -159,105 +118,84 @@ color: black;
   width: 100%;
   height: auto;
   object-fit: contain; 
-  
 }
-.card__image-wrapper {
-  position: relative; /* чтобы лейбл позиционировался относительно контейнера */
-  display: inline-block;
-  overflow: hidden;  
-  border-left: 2px solid var(--accent-color);
-  border-right: 2px solid var(--accent-color);
 
-   /* чтобы текст не вылазил за границы */
+.card__image-wrapper {
+  position: relative;
+  display: inline-block;
+  border-right: 2px solid var(--accent-color);  
+  border-left: 2px solid var(--accent-color);
+  overflow: hidden;
 }
 
 
 .card__title {
-  font-family: var(--font-main);
-  padding: 4px 10px;
   border: 2px solid var(--accent-color);
-
-
-
-
-  
-  font-style: normal;
+  padding: 4px 10px;
+  color: black;
+  font-family: var(--font-main);
   font-weight: 715;
   font-size: 18px;
+  font-style: normal;
   line-height: 22px;
-  color: black;
-
-
-
 }
 
 .card__label {
   position: absolute;
-  right: 25px;
   top: 25px;
+  right: 25px;
+  opacity: 0.5;
+  color: var(--accent-color);
   font-family: var(--font-accent);
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
+  font-style: normal;
   line-height: 14px;
   text-transform: uppercase;
-  color: var(--accent-color);
-  mix-blend-mode: hard-light;
-  opacity: 0.5;
   text-shadow:
     -1px 0 white, 
      0 1px white, 
      1px 0 white, 
      0 -1px white;
+  mix-blend-mode: hard-light;
 }
 
-
-
 .card__icon-button {
-  border: 2px solid transparent;
-  background: none;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  padding: 0;          /* убираем внутренние поля */
   margin: 0;
-
-       /* можно оставить, если есть свой border */
-
-
-      /* убирает baseline gap */
-
-
-  
-
-
+  border: 2px solid transparent;
+  padding: 0;  
+  background: none;
   transition: border-color 0.3s ease;
 }
 
 .main-body, .core {
   fill: transparent;
 }
+
 .core {
   transition: fill 0.3s linear 0.03s;
 }
+
 .main-body {
   transition: fill 0.3s linear;
 }
+
 .contour {
   fill: var(--accent-color);
   transition: fill 0.1s linear;
- 
 }
+
 .sparks {
-  fill: var(--contour-color);
   opacity: 0;
+  fill: var(--contour-color);
 }
 
 .like-icon:hover .core {
-  transition: fill 0.3s linear;
   fill: var(--accent-color);
-
+  transition: fill 0.3s linear;
 }
 
 .like-icon:hover .main-body {
@@ -266,45 +204,43 @@ color: black;
 }
 
 .like-icon:active .core {
+  fill: var(--animation-fill-color);
   transition: fill 0.3s linear;
-  fill: var(--animation-fill-color);
 }
+
 .like-icon:active .main-body {
-  transition: fill 0.3s linear 0.05s;
   fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0.05s;
 }
 
-
-/* Убрать системный фокус */
 .card__icon-button:focus {
   outline: none;
 }
 
-/* Показывается только при Tab */
 .card__icon-button:focus-visible {
   border-color: var(--accent-color);
-  
 }
+
 .like-icon.is-liked .core {
   fill: var(--animation-fill-color);
   transition: fill 0.3s linear;
 }
+
 .like-icon.is-liked .main-body {
   fill: var(--animation-fill-color);
   transition: fill 0.3s linear 0.05s;
 }
 
-/* Контур */
 .like-icon.is-liked .contour {
-  fill: var(--animation-fill-color);                    /* новый цвет */
-  transition: fill 0.3s linear 0.06s; /* только fill, линейная функция, задержка 0.06s */
+  fill: var(--animation-fill-color);                 
+  transition: fill 0.3s linear 0.06s;
 }
 .like-icon.is-liked .sparks {
-  animation: sparks-flash 0.3s ease-in 0.3s forwards; }
+  animation: sparks-flash 0.3s ease-in 0.3s forwards; 
+}
 
-/* Указываем точку трансформации для сердца */
 .like-icon .heart {
-  transform-origin: center
+  transform-origin: center;
 }
 
 .like-icon.is-liked .heart {
@@ -312,58 +248,45 @@ color: black;
 } 
 
 .card__like {
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 130px;
+  border: 2px solid black;
+  padding: 11px 36px;
   font-family: var(--font-accent);
-font-weight: 400;
-font-size: 9px;
-line-height: 0.9;
-padding: 11px 36px;
-background: #FFFFFF;
-border: 2px solid black;
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 8px;
-width: 130px;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 0.9;
+  background: #FFFFFF;
 
 }
 
-
-
-  
 .save-icon {
+  flex-shrink: 0;
   width: 21px;
   height: 21px;
-  flex-shrink: 0;
 }
-
-
-
-
 
 .save__button {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  margin-bottom: 100px;
+  border: 2px solid var(--accent-color);
   padding: 17px 20px;
   background: white;
-  border: 2px solid var(--accent-color);
-  margin-bottom: 100px;
-
 }
+
 .button__text {
-
-font-family: var(--font-accent);
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 90%;
-
-
-color: black;
-
-
+  color: black;
+  font-family: var(--font-accent);
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 90%;
 }
 
 .header__theme-menu-button_active {
@@ -371,67 +294,38 @@ color: black;
   pointer-events: none;
 }
 
-
 .header__theme-menu-button:focus {
-  outline: none;
   box-shadow: 2px 2px 0 var(--accent-color);
+  outline: none;
   transition: box-shadow 0.3s ease;
 }
 
 .header__theme-menu-button {
-  position: relative;       /* важно для ::before */
+  position: relative;    
   overflow: hidden;  
   cursor: var(--cursor);
-
- 
 }
 
-/* Псевдоэлемент, который будет анимироваться */
-.header__theme-menu-button::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;              /* старт за пределами кнопки */
-  width: 100%;
-  height: 100%;
-  background: var(--span-color);          /* белый фон */
-  mix-blend-mode: difference; /* меняем цвет текста при перекрытии */
-  transition: 0.5s ease-in-out;
-  z-index: 1;  
-  transform: scaleX(0);         /* скрыт по ширине */
-  transform-origin: left;  
-    /* анимация слева направо */
-              /* текст поверх */
+  .header__theme-menu-button:hover {
+  filter: var(--filter) blur(0.4px);
 }
 
-.header__theme-menu-button:hover::before { 
-  transform: translateX(100%); 
-  left: 0; 
-  transform: scaleX(1);  }
-  
-
-
-
-/* по умолчанию модалка и её контент */
 .diskette-dialogg {
-  padding: 30px 40px;
   border: 2px solid var(--accent-color)0;
-  background-color: white;
   border: 2px solid var(--accent-color);
+  padding: 30px 40px;
+  background-color: white;
 }
 
 .modal__content {
-  display: none; /* скрываем по умолчанию */
+  display: none; 
 }
 
-/* когда диалог открыт */
 .diskette-dialogg[open] .modal__content {
   display: flex;
+  flex-direction: column;
   gap: 30px;
   background-color: white;
-  
-
-  flex-direction: column;
 }
 
 .diskette-dialogg[open] .modal__left {
@@ -440,6 +334,7 @@ color: black;
   align-items: center;
   gap: 20px;
 }
+
 .diskette-dialogg[open] .modal__right {
   display: flex;
   flex-direction: row;
@@ -450,73 +345,67 @@ color: black;
 .close-button {
   display: flex;
   flex: 1 1 100%; 
-  justify-content: center; /* горизонтальное центрирование */
-  align-items: center;           /* занимает всю ширину родителя */
-  padding: 12.5px 0;         /* вертикальные отступы */
+  justify-content: center; 
+  align-items: center;          
   border: 2px solid black;
-  background-color: transparent;
+  padding: 12.5px 0;        
   font-family: var(--font-accent);
   font-size: 14px;
   text-transform: uppercase;
-  
+  background-color: transparent;
 }
 
 .diskette-dialogg::backdrop {
   background: rgba(var(--accent-color-rgb), 0.75);
 }
 
-
-
-/* Заголовок модалки */
 .modal__title {
+  color: black;
   font-family: var(--font-accent);
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
+  font-style: normal;
   line-height: 150%;
-  color: black;
-  
 }
 
-/* Текст кнопки OK */
 .close-button-text {
+  color: black;
   font-family: var(--font-accent);
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
+  font-style: normal;
   line-height: 90%;
-  text-transform: uppercase;
-  color: black;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .modal__icon {
   flex-shrink: 0;
-  width: 39px;   /* фиксированная ширина */
+  width: 39px;   
   height: 39px;
-  fill: var(--accent-color)
- 
+  fill: var(--accent-color);
 }
 
 .filter {
-
-  filter: var(--filter)
- 
+  filter: var(--filter);
 }
 
-/* Основной селектор кнопки */
 .card__like, .save__button, .close-button {
-  position: relative;          /* для псевдоэлемента */
-  overflow: hidden;            /* чтобы псевдоэлемент не вылезал */
-  color: black;    /* исходный цвет текста */
-  transition: box-shadow 0.3s ease; /* плавный переход тени при фокусе */
+  position: relative;         
+  overflow: hidden;          
+  color: black;   
+  transition: box-shadow 0.3s ease
 }
 
-/* Фокус: убираем стандартную обводку и добавляем тень */
 .card__like:focus,
 .save__button:focus,
 .close-button:focus {
   outline: none;
+}
+
+.card__like:focus-visible,
+.save__button:focus-visible,
+.close-button:focus-visible {
   box-shadow: 2px 2px 0 var(--accent-color);
   transition: box-shadow 0.3s ease;
 }
@@ -524,57 +413,49 @@ color: black;
 .save__button,
 .card__like,
 .close-button {
-  position: relative;       /* важно для ::before */
+  position: relative;       
   overflow: hidden;  
   cursor: var(--cursor);
-         /* чтобы псевдоэлемент не вылезал */
- 
 }
 
-/* Псевдоэлемент, который будет анимироваться */
 .save__button::before,
 .card__like::before,
 .close-button::before  {
   content: '';
   position: absolute;
   top: 0;
-  left: -100%;              /* старт за пределами кнопки */
+  left: -100%;            
+  z-index: 1;
   width: 100%;
   height: 100%;
-  background: var(--span-color);          /* белый фон */
-  mix-blend-mode: difference; /* меняем цвет текста при перекрытии */
-  transition: 0.5s ease-in-out;
-  z-index: 1;  
-  transform: scaleX(0);         /* скрыт по ширине */
-  transform-origin: left;  
-    /* анимация слева направо */
-              /* текст поверх */
+  background: var(--span-color);        
+  transition: 0.5s ease-in-out;  
+  transform: scaleX(0);        
+  transform-origin: left;
+  mix-blend-mode: difference; 
 }
 
 .save__button:hover::before, .card__like:hover::before, .close-button:hover::before { 
-  transform: translateX(100%); 
   left: 0; 
   transform: scaleX(1); 
-  
-
- /* остаётся на месте после въезда */ }
+}
 
 
 
 @supports((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
   .card__label {
+    text-shadow: none;
     -webkit-text-stroke: 1px #ffffff;
-    text-stroke: 1px #ffffff; /* для возможной будущей поддержки стандарта */
-    text-shadow: none; /* убираем тени, чтобы не накладывались */
+    text-stroke: 1px #ffffff; 
   }
 }
 
 @media (width <= 375px) {
   .header__border {
-    padding-left:  clamp(16px, 4vw, 123px);
-    padding-right: clamp(16px, 4vw, 123px);
     padding-top:    clamp(120px, 10vw, 133px);
+    padding-right: clamp(16px, 4vw, 123px);
     padding-bottom: clamp(120px, 10vw, 133px);
+    padding-left:  clamp(16px, 4vw, 123px);
   }
   .save-icon {
     width: 28px;
@@ -584,39 +465,31 @@ color: black;
 
 @media (width > 375px) {
   .header__border {
-    padding-left:  clamp(16px, 10vw, 123px);
-    padding-right: clamp(16px, 10vw, 123px);
-    padding-top:    clamp(120px, 10vw, 133px);
+  padding-top:    clamp(120px, 10vw, 133px);
+  padding-right: clamp(16px, 10vw, 123px);
   padding-bottom: clamp(120px, 10vw, 133px);
+  padding-left:  clamp(16px, 10vw, 123px);
   }
+
   .cards {
   display: flex;               
   flex-direction: column;      
   align-items: center;       
-
-  gap: 50px;  
-                 
+  gap: 50px;             
 }
+
 .header {
-
-  padding-bottom: 98px;
   gap: 64px;
-  
-
-
- 
-  
+  padding-bottom: 98px;
 }
+
 .save__button {
   flex-direction: row;
-
-
-
 }
+
 .diskette-dialogg {
-  padding: 30px 30px;
   max-width: 353px;
- 
+  padding: 30px 30px;
 }
 }
 

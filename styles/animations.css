@@ -1,5 +1,3 @@
-
-/* @keyframes для масштабирования сердца */
 @keyframes heart-scale {
   0% {
     transform: scale(1);
@@ -12,18 +10,15 @@
   }
 }
 
-
-
-/* @keyframes для вспышки искр */
 @keyframes sparks-flash {
   0% {
-    opacity: 0; /* искры невидимы */
+    opacity: 0;
   }
   50% {
-    opacity: 1; /* вспышка */
+    opacity: 1; 
   }
   100% {
-    opacity: 0; /* исчезновение */
+    opacity: 0; 
   }
 }
 
