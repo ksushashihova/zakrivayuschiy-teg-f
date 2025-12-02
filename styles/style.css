@@ -2,7 +2,7 @@
 
 Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
 ✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
+✦ like-icon — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
@@ -13,4 +13,612 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-style: var(--font-main);
+  font-variation-settings: var(--weight-card-text);
+  background-image: var(--page-bg);
+  background-size: cover;      
+  background-attachment: fixed; 
 }
+
+.header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+  gap: 66px;
+
+
+ 
+  
+}
+.header__theme-menu-list {
+  display: flex;
+  gap: 20px;
+  padding-top: 10px;
+}
+
+.header__theme-menu-button {
+  border: 2px solid var(--accent-color);
+  
+  padding: 5px 13px;
+  font-family: var(--font-accent);
+  color: black;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1;
+  text-transform: lowercase;
+  background: none;
+  cursor: pointer;
+}
+
+.header__border {
+  border: 2px solid var(--accent-color);
+  background: #fff;
+  background-clip: padding-box;
+  padding-left:  clamp(16px, 4vw, 123px);
+    padding-right: clamp(16px, 4vw, 123px);
+    padding-top:    clamp(120px, 10vw, 133px);
+    padding-bottom: clamp(120px, 10vw, 133px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    gap: 20px;
+
+}
+
+.header__title {
+  font-family: var(--font-accent);
+  font-weight: 400;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);;
+
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+.header p {
+ 
+
+font-family: var(--font-accent);
+font-style: normal;
+font-weight: 400;
+font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+line-height: 14px;
+/* identical to box height */
+text-transform: uppercase;
+
+color: var(--accent-color);
+
+
+}
+.card__content {
+  border: 2px solid var(--accent-color)
+}
+.cards__text {
+  
+  
+
+font-family: var(--font-main);
+font-style: normal;
+font-weight: 410;
+font-size: 18px;
+padding: 25px;
+display: flex;
+flex-direction: column;
+
+gap: 25px;
+/* Это было самое начало пути. На этом этапе важно было проникнуться основами и настроиться на учёбу. И, возможно, подумать, как новые знания могут повлиять на ваше будущее. */
+
+
+line-height: 21px;
+
+
+color: black;
+
+
+
+
+
+
+}
+
+.cards {
+  display: flex;               
+  flex-direction: column;      
+  align-items: center;       
+
+  gap: 52px;                 
+}
+
+.card {
+  max-width: clamp(375px,100%,700px );
+  display: flex;               /* или display: grid; */
+  flex-direction: column; 
+  
+  
+  background-color: white;  
+  
+
+}
+
+
+
+.card__buttons {
+  display: flex;               /* или display: grid; */      /* если флекс */
+  align-items: center; 
+  justify-content: flex-end;
+  padding: 0 25px 21px 0;
+  gap: 5px;
+}
+
+.card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain; 
+  
+}
+.card__image-wrapper {
+  position: relative; /* чтобы лейбл позиционировался относительно контейнера */
+  display: inline-block;
+  overflow: hidden;  
+  border-left: 2px solid var(--accent-color);
+  border-right: 2px solid var(--accent-color);
+
+   /* чтобы текст не вылазил за границы */
+}
+
+
+.card__title {
+  font-family: var(--font-main);
+  padding: 4px 10px;
+  border: 2px solid var(--accent-color);
+
+
+
+
+  
+  font-style: normal;
+  font-weight: 715;
+  font-size: 18px;
+  line-height: 22px;
+  color: black;
+
+
+
+}
+
+.card__label {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  font-family: var(--font-accent);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  mix-blend-mode: hard-light;
+  opacity: 0.5;
+  text-shadow:
+    -1px 0 white, 
+     0 1px white, 
+     1px 0 white, 
+     0 -1px white;
+}
+
+
+
+.card__icon-button {
+  border: 2px solid transparent;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;          /* убираем внутренние поля */
+  margin: 0;
+
+       /* можно оставить, если есть свой border */
+
+
+      /* убирает baseline gap */
+
+
+  
+
+
+  transition: border-color 0.3s ease;
+}
+
+.main-body, .core {
+  fill: transparent;
+}
+.core {
+  transition: fill 0.3s linear 0.03s;
+}
+.main-body {
+  transition: fill 0.3s linear;
+}
+.contour {
+  fill: var(--accent-color);
+  transition: fill 0.1s linear;
+ 
+}
+.sparks {
+  fill: var(--contour-color);
+  opacity: 0;
+}
+
+.like-icon:hover .core {
+  transition: fill 0.3s linear;
+  fill: var(--accent-color);
+
+}
+
+.like-icon:hover .main-body {
+  fill: var(--accent-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon:active .core {
+  transition: fill 0.3s linear;
+  fill: var(--animation-fill-color);
+}
+.like-icon:active .main-body {
+  transition: fill 0.3s linear 0.05s;
+  fill: var(--animation-fill-color);
+}
+
+
+/* Убрать системный фокус */
+.card__icon-button:focus {
+  outline: none;
+}
+
+/* Показывается только при Tab */
+.card__icon-button:focus-visible {
+  border-color: var(--accent-color);
+  
+}
+.like-icon.is-liked .core {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear;
+}
+.like-icon.is-liked .main-body {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+/* Контур */
+.like-icon.is-liked .contour {
+  fill: var(--animation-fill-color);                    /* новый цвет */
+  transition: fill 0.3s linear 0.06s; /* только fill, линейная функция, задержка 0.06s */
+}
+.like-icon.is-liked .sparks {
+  animation: sparks-flash 0.3s ease-in 0.3s forwards; }
+
+/* Указываем точку трансформации для сердца */
+.like-icon .heart {
+  transform-origin: center
+}
+
+.like-icon.is-liked .heart {
+  animation: heart-scale 0.3s ease-in 0.1s forwards;
+} 
+
+.card__like {
+
+  font-family: var(--font-accent);
+font-weight: 400;
+font-size: 9px;
+line-height: 0.9;
+padding: 11px 36px;
+background: #FFFFFF;
+border: 2px solid black;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 8px;
+width: 130px;
+
+}
+
+
+
+  
+.save-icon {
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+}
+
+
+
+
+
+.save__button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 17px 20px;
+  background: white;
+  border: 2px solid var(--accent-color);
+  margin-bottom: 100px;
+
+}
+.button__text {
+
+font-family: var(--font-accent);
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 90%;
+
+
+color: black;
+
+
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+  pointer-events: none;
+}
+
+
+.header__theme-menu-button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--accent-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.header__theme-menu-button {
+  position: relative;       /* важно для ::before */
+  overflow: hidden;  
+  cursor: var(--cursor);
+
+ 
+}
+
+/* Псевдоэлемент, который будет анимироваться */
+.header__theme-menu-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;              /* старт за пределами кнопки */
+  width: 100%;
+  height: 100%;
+  background: var(--span-color);          /* белый фон */
+  mix-blend-mode: difference; /* меняем цвет текста при перекрытии */
+  transition: 0.5s ease-in-out;
+  z-index: 1;  
+  transform: scaleX(0);         /* скрыт по ширине */
+  transform-origin: left;  
+    /* анимация слева направо */
+              /* текст поверх */
+}
+
+.header__theme-menu-button:hover::before { 
+  transform: translateX(100%); 
+  left: 0; 
+  transform: scaleX(1);  }
+  
+
+
+
+/* по умолчанию модалка и её контент */
+.diskette-dialogg {
+  padding: 30px 40px;
+  border: 2px solid var(--accent-color)0;
+  background-color: white;
+  border: 2px solid var(--accent-color);
+}
+
+.modal__content {
+  display: none; /* скрываем по умолчанию */
+}
+
+/* когда диалог открыт */
+.diskette-dialogg[open] .modal__content {
+  display: flex;
+  gap: 30px;
+  background-color: white;
+  
+
+  flex-direction: column;
+}
+
+.diskette-dialogg[open] .modal__left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+.diskette-dialogg[open] .modal__right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.close-button {
+  display: flex;
+  flex: 1 1 100%; 
+  justify-content: center; /* горизонтальное центрирование */
+  align-items: center;           /* занимает всю ширину родителя */
+  padding: 12.5px 0;         /* вертикальные отступы */
+  border: 2px solid black;
+  background-color: transparent;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  text-transform: uppercase;
+  
+}
+
+.diskette-dialogg::backdrop {
+  background: rgba(var(--accent-color-rgb), 0.75);
+}
+
+
+
+/* Заголовок модалки */
+.modal__title {
+  font-family: var(--font-accent);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: black;
+  
+}
+
+/* Текст кнопки OK */
+.close-button-text {
+  font-family: var(--font-accent);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 90%;
+  text-transform: uppercase;
+  color: black;
+  text-align: center;
+}
+
+.modal__icon {
+  flex-shrink: 0;
+  width: 39px;   /* фиксированная ширина */
+  height: 39px;
+  fill: var(--accent-color)
+ 
+}
+
+.filter {
+
+  filter: var(--filter)
+ 
+}
+
+/* Основной селектор кнопки */
+.card__like, .save__button, .close-button {
+  position: relative;          /* для псевдоэлемента */
+  overflow: hidden;            /* чтобы псевдоэлемент не вылезал */
+  color: black;    /* исходный цвет текста */
+  transition: box-shadow 0.3s ease; /* плавный переход тени при фокусе */
+}
+
+/* Фокус: убираем стандартную обводку и добавляем тень */
+.card__like:focus,
+.save__button:focus,
+.close-button:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 var(--accent-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.save__button,
+.card__like,
+.close-button {
+  position: relative;       /* важно для ::before */
+  overflow: hidden;  
+  cursor: var(--cursor);
+         /* чтобы псевдоэлемент не вылезал */
+ 
+}
+
+/* Псевдоэлемент, который будет анимироваться */
+.save__button::before,
+.card__like::before,
+.close-button::before  {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;              /* старт за пределами кнопки */
+  width: 100%;
+  height: 100%;
+  background: var(--span-color);          /* белый фон */
+  mix-blend-mode: difference; /* меняем цвет текста при перекрытии */
+  transition: 0.5s ease-in-out;
+  z-index: 1;  
+  transform: scaleX(0);         /* скрыт по ширине */
+  transform-origin: left;  
+    /* анимация слева направо */
+              /* текст поверх */
+}
+
+.save__button:hover::before, .card__like:hover::before, .close-button:hover::before { 
+  transform: translateX(100%); 
+  left: 0; 
+  transform: scaleX(1); 
+  
+
+ /* остаётся на месте после въезда */ }
+
+
+
+@supports((text-stroke: 1px #000000) or (-webkit-text-stroke: 1px #000000)) {
+  .card__label {
+    -webkit-text-stroke: 1px #ffffff;
+    text-stroke: 1px #ffffff; /* для возможной будущей поддержки стандарта */
+    text-shadow: none; /* убираем тени, чтобы не накладывались */
+  }
+}
+
+@media (width <= 375px) {
+  .header__border {
+    padding-left:  clamp(16px, 4vw, 123px);
+    padding-right: clamp(16px, 4vw, 123px);
+    padding-top:    clamp(120px, 10vw, 133px);
+    padding-bottom: clamp(120px, 10vw, 133px);
+  }
+  .save-icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (width > 375px) {
+  .header__border {
+    padding-left:  clamp(16px, 10vw, 123px);
+    padding-right: clamp(16px, 10vw, 123px);
+    padding-top:    clamp(120px, 10vw, 133px);
+  padding-bottom: clamp(120px, 10vw, 133px);
+  }
+  .cards {
+  display: flex;               
+  flex-direction: column;      
+  align-items: center;       
+
+  gap: 50px;  
+                 
+}
+.header {
+
+  padding-bottom: 98px;
+  gap: 64px;
+  
+
+
+ 
+  
+}
+.save__button {
+  flex-direction: row;
+
+
+
+}
+.diskette-dialogg {
+  padding: 30px 30px;
+  max-width: 353px;
+ 
+}
+}
+
+
+

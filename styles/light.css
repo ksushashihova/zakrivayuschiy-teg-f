@@ -1,0 +1,78 @@
+
+:root.theme-light {
+  --page-bg:
+  /* 1. Вертикальные полосы */
+  repeating-linear-gradient(
+    to right,
+    #ffb6d9 0,
+    #ffb6d9 2px,
+    transparent 2px,
+    transparent 4px
+  ),
+
+  /* 2. Горизонтальные полосы */
+  repeating-linear-gradient(
+    to bottom,
+    #ffb6d9 0,
+    #ffb6d9 2px,
+    transparent 2px,
+    transparent 4px
+  ),
+
+  /* 3. Плавный вертикальный градиент */
+  linear-gradient(
+    to bottom,
+    #ffd3e8 0%,
+    #ffd3e8 0.01%,
+    #c20076 100%
+  );
+  --filter: brightness(1.08) hue-rotate(91deg);
+  --accent-color: #880a56;
+  --accent-color-rgb: 136, 10, 80;
+  --span-color: #880a56;
+  --cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text y='24' font-size='24'>💖</text></svg>") 16 16, auto;
+}
+
+
+  
+@media (prefers-color-scheme: light) {
+  :root {
+    --page-bg:
+  /* 1. Вертикальные полосы */
+  repeating-linear-gradient(
+    to right,
+    #ffb6d9 0,
+    #ffb6d9 2px,
+    transparent 2px,
+    transparent 4px
+  ),
+
+  /* 2. Горизонтальные полосы */
+  repeating-linear-gradient(
+    to bottom,
+    #ffb6d9 0,
+    #ffb6d9 2px,
+    transparent 2px,
+    transparent 4px
+  ),
+
+  /* 3. Плавный вертикальный градиент */
+  linear-gradient(
+    to bottom,
+    #ffd3e8 0%,
+    #ffd3e8 0.01%,
+    #c20076 100%
+  );
+    --filter: brightness(1.08) hue-rotate(91deg);
+    --accent-color: #880a56;
+    --accent-color-rgb: 136, 10, 80;
+    --span-color: #880a56;
+    --cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text y='24' font-size='24'>💖</text></svg>") 16 16, auto;
+    
+  }
+
+  
+  
+  
+}
+

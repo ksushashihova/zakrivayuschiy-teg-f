@@ -1,0 +1,39 @@
+
+:root.theme-dark {
+    --page-bg: 
+    repeating-linear-gradient(
+    to right,
+    #d3d3d3 0,
+    #d3d3d3 2px,
+    transparent 2px,
+    transparent 4px
+  ),
+
+  /* 2. Горизонтальные полоски */
+  repeating-linear-gradient(
+    to bottom,
+    #d3d3d3 0,
+    #d3d3d3 2px,
+    transparent 2px,
+    transparent 4px
+  ),
+
+  /* 3. Плавный градиент сверху вниз */
+  linear-gradient(
+    to bottom,
+    #e7e7e7 0%,
+    #e7e7e7 0.01%,  /* немного продлеваем светлый оттенок */
+    #1a1a1a 100%
+  );
+  --animation-fill-color: #FF0000;
+  --contour-color: #FF0000;
+  --filter: grayscale(100%);
+  --accent-color: #000;
+  --accent-color-rgb: 0, 0, 0;
+  --span-color: white;
+  --cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text y='24' font-size='24'>🖤</text></svg>") 16 16, auto;
+
+
+  }
+
+
