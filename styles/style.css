@@ -17,7 +17,7 @@
   min-height: auto;
   padding-bottom: 100px;
   padding-top: 100px;
-  width: clamp(320px, 100%, 1700px);
+  width: clamp(320px, 100%, 1440px);
   margin: 0 auto;
   
 }
