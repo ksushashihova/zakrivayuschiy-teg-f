@@ -30,9 +30,9 @@
   gap: 20px;
   border: 2px solid var(--accent-color);
   padding-top:    clamp(120px, 10vw, 133px);
-  padding-right: clamp(16px, 4vw, 123px);
+  padding-right: clamp(0.875rem, -1.0625rem + 9.6875vw, 7.65625rem);
   padding-bottom: clamp(120px, 10vw, 133px);
-  padding-left:  clamp(16px, 4vw, 123px);
+  padding-left: clamp(0.875rem, -1.0625rem + 9.6875vw, 7.65625rem);
   background: #fff;
   background-clip: padding-box;
 }
@@ -111,7 +111,6 @@
   border-left: 2px solid var(--accent-color);
   overflow: hidden;
 }
-
 
 .card__title {
   border: 2px solid var(--accent-color);
@@ -434,10 +433,6 @@
 
 @media (width > 375px) {
   .header__border {
-  padding-top:    clamp(120px, 10vw, 133px);
-  padding-right: clamp(16px, 10vw, 123px);
-  padding-bottom: clamp(120px, 10vw, 133px);
-  padding-left:  clamp(16px, 10vw, 123px);
   gap: 36px;
   }
 
